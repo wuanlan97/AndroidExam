@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wuanlan97.androidexam.SelectMenu">
+
+    <Button
+        android:id="@+id/TuanbackToMenu"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="返回"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/selectALL"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查询全部"
+        app:layout_constraintTop_toBottomOf="@+id/TuanbackToMenu"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/selectIncome"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查询收入"
+        app:layout_constraintTop_toBottomOf="@+id/selectALL"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/selectPay"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查询支出"
+        app:layout_constraintTop_toBottomOf="@+id/selectIncome"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/selectDate"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查询下面日期"
+        app:layout_constraintTop_toBottomOf="@+id/selectPay"
+        tools:layout_editor_absoluteX="8dp" />
+
+</android.support.constraint.ConstraintLayout>

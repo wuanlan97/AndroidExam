@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wuanlan97.androidexam.Menu">
+
+    <TextView
+        android:id="@+id/printname"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="欢迎使用"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/ToUpdate"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="修改用户信息"
+        app:layout_constraintTop_toBottomOf="@+id/printname"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/ToInsert"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="记账"
+        app:layout_constraintTop_toBottomOf="@+id/ToUpdate"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/ToSelect"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查账"
+        app:layout_constraintTop_toBottomOf="@+id/ToInsert"
+        tools:layout_editor_absoluteX="8dp" />
+</android.support.constraint.ConstraintLayout>
