@@ -22,6 +22,11 @@
         <activity android:name=".select" />
         <activity android:name=".insert" />
         <activity android:name=".SelectMenu" />
+        <activity
+            android:name=".setDatePicker"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".setTimePicket"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>

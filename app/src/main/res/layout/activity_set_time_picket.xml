@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wuanlan97.androidexam.setDatePicker">
+    tools:context="com.example.wuanlan97.androidexam.setTimePicket">
 
-    <DatePicker
-        android:id="@+id/setdatePicker"
-        android:layout_width="247dp"
+    <TimePicker
+        android:id="@+id/setTimePic"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"
+        android:timePickerMode="spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></DatePicker>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/DatePickerOK"
+        android:id="@+id/TimePicOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -29,5 +28,5 @@
         android:text="OK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setdatePicker" />
+        app:layout_constraintTop_toBottomOf="@+id/setTimePic" />
 </android.support.constraint.ConstraintLayout>
