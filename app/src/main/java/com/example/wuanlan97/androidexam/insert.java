@@ -50,8 +50,8 @@ public class insert extends AppCompatActivity {
                     if(time!=null || time.equals(""))
                     {
                         datetime+=" "+time;
-                        booldatetime.setChecked(true);
                         setdatetime=true;
+                        booldatetime.setChecked(true);
                     }
                     else
                     {
@@ -91,18 +91,39 @@ public class insert extends AppCompatActivity {
                 Book b=new Book();
                 b.init(insert.this);
                 String Money=money.getText().toString();
-                if(income)
-                {if(b.income(Money))
+
+                if(setdatetime)
                 {
-                    ((EditText) findViewById(R.id.Money)).setText(null);
-                }
+                    if(income)
+                    {if(b.income(Money,datetime))
+                    {
+                        ((EditText) findViewById(R.id.Money)).setText(null);
+                    }
+                    }
+                    else
+                    { if(b.pay(Money,datetime))
+                    {
+                        ((EditText) findViewById(R.id.Money)).setText(null);
+                    }
+                    }
                 }
                 else
-                { if(b.pay(Money))
                 {
-                    ((EditText) findViewById(R.id.Money)).setText(null);
+                    if(income)
+                    {if(b.income(Money))
+                    {
+                        ((EditText) findViewById(R.id.Money)).setText(null);
+                    }
+                    }
+                    else
+                    { if(b.pay(Money))
+                    {
+                        ((EditText) findViewById(R.id.Money)).setText(null);
+                    }
+                    }
                 }
-                }
+
+
             }
         });
         Button back=this.findViewById(R.id.InsertTurnback);
@@ -117,7 +138,7 @@ public class insert extends AppCompatActivity {
         booldatetime.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked&&setdatetime)
+                if(isChecked&&(!setdatetime))
                 {
                     Intent intent1=new Intent(insert.this,setDatePicker.class);
                     startActivityForResult(intent1,1);
@@ -125,6 +146,7 @@ public class insert extends AppCompatActivity {
                 }
                 else
                 {
+                    if(!isChecked)
                     setdatetime=false;
                 }
             }
